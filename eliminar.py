@@ -7,7 +7,7 @@ from src.modelo.carr_gan import Carr_Gan
 from src.modelo.grupo_apuesta import Grupo_Apuesta
 from src.modelo.declarative_base import Session, engine, Base
 
-
+#Test
 def fn_can_delete_competidor(idComp):
     session = Session()
     carreras = session.query(Carrera).all()

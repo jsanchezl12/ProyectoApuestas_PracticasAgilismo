@@ -1,0 +1,9 @@
+Select * 
+From carrera CA
+INNER JOIN grupo_apuesta GA  ON CA.id = GA.carrera
+INNER JOIN apuesta AP ON AP.grupo_apuesta = GA.id
+INNER JOIN competidor CO ON CO.carrera = CA.id and AP.competidor = CO.nombre
+INNER JOIN apostador APO ON AP.apostador = APO.id
+INNER JOIN carr_gan CG ON CG.carrera = CA.id
+INNER JOIN ganancia GAN ON GAN.carr_gan = CG.id AND GAN.apostador = APO.id
+Where CA.nombre = 'Carrera 1'
